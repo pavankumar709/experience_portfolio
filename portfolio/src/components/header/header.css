@@ -1,0 +1,27 @@
+.header {
+  animation: rotateAnimation 5s linear infinite;
+}
+
+@keyframes rotateAnimation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotateText {
+  from {
+    transform: rotate(0deg) translateX(10px) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translateX(10px) rotate(-360deg);
+  }
+}
+
+.text {
+  position: absolute;
+  animation: rotateText 5s linear infinite;
+  transform-origin: center center;
+}
