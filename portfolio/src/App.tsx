@@ -1,10 +1,16 @@
+import { useEffect } from "react";
 import Header from "./components/header/header";
+import AOS from "aos";
+import "./App.css";
 
 function App() {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <>
       {/* home  start*/}
-      <div className=" h-[100dvh] relative">
+      <div className=" h-[100dvh] relative overflow-x-hidden">
         <img
           src="https://raw.githubusercontent.com/pavankumar709/pavankumar709/main/Frame%2013.png"
           loading="lazy"
@@ -15,15 +21,17 @@ function App() {
         <div className="absolute top-0 left-0 h-[100dvh] w-[100%] ">
           <div className="flex flex-col m-0 justify-center text-white items-center h-[100dvh] w-[100%] ">
             <p
-              className="text-9xl"
+              className="md:text-9xl text-3xl"
               style={{
                 letterSpacing: "15px",
               }}
+              data-aos="zoom-out  "
+              data-aos-duration="3000"
             >
               DEV PAVAN KUMAR
             </p>
             <div className="flex justify-center">
-              <span className="text-center w-8/12 text-2xl">
+              <span className="text-center md:w-8/12 md:text-2xl">
                 Hello! I'm Pavan Kumar, a dedicated Frontend Developer with a
                 year of impactful internship experience. I specialize in
                 crafting robust software solutions and architecting scalable
@@ -35,6 +43,13 @@ function App() {
               </span>
             </div>
           </div>
+        </div>
+        <div className="absolute bottom-14 w-[100%] overflow-hidden ">
+          <img
+            src="https://raw.githubusercontent.com/pavankumar709/pavankumar709/main/vecteezy_tumbleweed-and-dust-clouds-in-desert_14718540-removebg-preview.png"
+            alt=""
+            className="h-[100px] w-[100px] rolling-element"
+          />
         </div>
       </div>
       {/* home  end*/}
