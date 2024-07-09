@@ -28,21 +28,78 @@ const Header = () => {
         </div>
       </div>
       {menu && (
-        <div className="h-[100dvh] w-[100%] absolute top-0 left-0 z-10 bg-[#00000099]">
-          <div className="h-[100dvh] w-[100%] flex justify-center items-center relative">
+        <>
+          <div className="h-[100dvh] w-[100%] absolute top-0 left-0 z-10 bg-[#00000099]">
+            <div className="h-[100dvh] w-[100%] flex-col  justify-center items-center ">
+              <div className="relative flex justify-center">
+                <img
+                  src="./hat.png"
+                  alt=""
+                  data-aos="zoom-out-up"
+                  data-aos-duration="3000"
+                />
+                <img
+                  src="Best-Animations-unscreen.gif"
+                  className="absolute h-[114px]  anmation"
+                  alt=""
+                />
+              </div>
+              <div
+                className="flex justify-center"
+                data-aos="fade-down"
+                data-aos-duration="3000"
+              >
+                <div className="relative">
+                  <img
+                    src="https://raw.githubusercontent.com/pavankumar709/pavankumar709/main/Download_Brown_Cowboy_Hat_for_free-removebg-preview.png"
+                    alt="Home"
+                    className="h-[150px]"
+                  />
+                  <p className="absolute anmation text-2xl text-white">HOME</p>
+                </div>
+                <div className="relative">
+                  <img
+                    src="https://raw.githubusercontent.com/pavankumar709/pavankumar709/main/Download_Brown_Cowboy_Hat_for_free-removebg-preview.png"
+                    alt="Projects"
+                    className="h-[150px]"
+                  />
+                  <p className="absolute anmation text-2xl text-white">
+                    PROJECTS
+                  </p>
+                </div>
+                <div className="relative">
+                  <img
+                    src="https://raw.githubusercontent.com/pavankumar709/pavankumar709/main/Download_Brown_Cowboy_Hat_for_free-removebg-preview.png"
+                    alt="experience"
+                    className="h-[150px]"
+                  />
+                  <p className="absolute anmation text-2xl text-white">
+                    EXPERIENCE
+                  </p>
+                </div>
+                <div className="relative">
+                  <img
+                    src="https://raw.githubusercontent.com/pavankumar709/pavankumar709/main/Download_Brown_Cowboy_Hat_for_free-removebg-preview.png"
+                    alt="contact"
+                    className="h-[150px]"
+                  />
+                  <p className="absolute anmation text-2xl text-white">
+                    CONTACT
+                  </p>
+                </div>
+              </div>
+            </div>
+
             <img
-              src="./hat.png"
-              alt=""
-              data-aos="zoom-out-up"
-              data-aos-duration="3000"
-            />
-            <img
-              src="Best-Animations-unscreen.gif"
-              className="absolute h-[114px]"
-              alt=""
+              src="/220524-P104HM-863-removebg-preview.png"
+              alt="dsds"
+              className="top-0 right-0 absolute text-white h-[130px] "
+              onClick={() => {
+                setMenu(false);
+              }}
             />
           </div>
-        </div>
+        </>
       )}
     </>
   );

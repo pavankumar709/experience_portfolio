@@ -1,9 +1,19 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Header from "./components/header/header";
 import AOS from "aos";
 import "./App.css";
+import SplashScreen from "./components/splash-screen/SplashScreen";
 
 function App() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 3000); // Adjust the timeout as needed
+
+    return () => clearTimeout(timer);
+  }, []);
   useEffect(() => {
     AOS.init();
   }, []);
@@ -11,6 +21,7 @@ function App() {
     <>
       {/* home  start*/}
       <div className=" h-[100dvh] relative overflow-x-hidden">
+        {loading && <SplashScreen />}
         <img
           src="https://raw.githubusercontent.com/pavankumar709/pavankumar709/main/Frame%2013.png"
           loading="lazy"
@@ -33,13 +44,13 @@ function App() {
             <div className="flex justify-center">
               <span className="text-center md:w-8/12 md:text-2xl">
                 Hello! I'm Pavan Kumar, a dedicated Frontend Developer with a
-                year of impactful internship experience. I specialize in
-                crafting robust software solutions and architecting scalable
-                applications using React.js and Next.js. My journey has honed my
-                skills in technical documentation, communication, and
-                collaborative problem-solving. Embracing new challenges, I've
-                expanded my toolkit to include Jotai for state management and
-                explored creative design with Figma. Passionate
+                year of impactful experience. I specialize in crafting robust
+                software solutions and architecting scalable applications using
+                React.js and Next.js. My journey has honed my skills in
+                technical documentation, communication, and collaborative
+                problem-solving. Embracing new challenges, I've expanded my
+                toolkit to include Jotai for state management and explored
+                creative design with Figma. Passionate
               </span>
             </div>
           </div>
@@ -62,10 +73,10 @@ function App() {
       <div className=""></div>
       {/* experience  end*/}
 
-      {/* concat me
+      {/* contact me
         start*/}
       <div className=""></div>
-      {/* concat me
+      {/* contact me
         end*/}
     </>
   );
